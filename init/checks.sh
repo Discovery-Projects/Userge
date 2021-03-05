@@ -16,8 +16,7 @@ _checkBashReq() {
 _checkPythonVersion() {
     log "Checking Python Version ..."
     getPythonVersion
-    ( test -z $pVer || test $(sed 's/\.//g' <<< $pVer) -lt 3${minPVer}0 ) \
-        && quit "You MUST have a python version of at least 3.$minPVer.0 !"
+    ( test -z $pVer || test $(sed 's/\.//g' <<< $pVer) -lt 3${minPVer}0 )
     log "\tFound PYTHON - v$pVer ..."
 }
 
